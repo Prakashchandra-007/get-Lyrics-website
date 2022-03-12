@@ -35,7 +35,6 @@ html,body{
 .search-div{
     display: flex;
     justify-content: space-between;    
-    border-top:1px solid;
     padding-left: 5%;
     position: relative;
     border-radius:50em;
@@ -47,10 +46,12 @@ html,body{
     border:none;
     border-radius: 30em;
     width:30%;
-    background-color:rgb(185, 64, 155);
+    background-color:var(--accent-color);
+    color:white;
 }
 .search-div input{
     border:none;
+    
     background-color:rgba(255, 255, 255, 0);
     width:70%
 }
@@ -68,14 +69,14 @@ html,body{
 .main-container{
    
     margin:0 auto;
-    width:80%;
+    width:50%;
     height:100%;
     text-align:center;
     padding-top: 2%;
 }
 .items{
     display: flex;  
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
     
 }
