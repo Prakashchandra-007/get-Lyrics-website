@@ -9,6 +9,7 @@ function init(){
             alert('Please type in a search term');
         }
         else{
+            
             getapi(searchData.value)
             
             
@@ -42,9 +43,11 @@ function populate(data) {
     let arr_len =data.data.length;
     
     console.log('artist name: ' + data.data[0].artist.name);
+    
+    console.log('populating data');
     for(let i = 0; i < arr_len; i++){
         item_div.innerHTML+=(`<div class="items">
-        <p><strong> ${data.data[i].artist.name}</strong>
+        <p id="item_detail_list"><strong> ${data.data[i].artist.name}</strong>
         - ${data.data[i].title} </p>
         <button data-songId="${data.data[i].id}" onClick='getLyrics(this)' class="getLink">Get Lyrics</button>
     </div>`);
@@ -76,7 +79,9 @@ function lyricApi(artist_name,title){
     fetch(`https://api.lyrics.ovh/v1/${artist_name}/${title}`)
     .then(resp => resp.json())
     .then(data=>{console.log(data.lyrics)
-        item_div.innerHTML =`<h1>${data.lyrics}</h1>`
+        let lyric =data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+        
+        item_div.innerHTML =`<h2><span id="header_artist">${artist_name}</span>-${title}</h2>  <p>${lyric}</p>`
         //  console.log(data.lyrics)
         });
     

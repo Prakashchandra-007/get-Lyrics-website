@@ -36,10 +36,12 @@ html,body{
     display: flex;
     justify-content: space-between;    
     padding-left: 5%;
+    min-width: 250px;
     position: relative;
+    border:2% solid white;
     border-radius:50em;
     width:35%;
-    height :40px;
+    height :10%;
     background-color:white;
 }
 .search-div button{
@@ -72,7 +74,7 @@ html,body{
     width:50%;
     height:100%;
     text-align:center;
-    padding-top: 2%;
+    padding: 3%;
 }
 .items{
     display: flex;  
@@ -84,8 +86,16 @@ html,body{
 .items button{
     height:30px;
     margin-left:50px;
+    min-width: 72px;
     border:none;
     border-radius:50px;
     background-color:#874356;
     color:#fff;
+}
+#header_artist{
+    font-size: 2rem;
+    font-weight: bold;
+}
+#item_detail_list{
+    min-width: 10px;
 }
