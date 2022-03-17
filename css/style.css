@@ -94,6 +94,10 @@ html,body{
     background-color:#874356;
     color:#fff;
 }
+.ites button:active{
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%))
+    transform scale(.98)
+}
 #header_artist{
     font-size: 2rem;
     font-weight: bold;
