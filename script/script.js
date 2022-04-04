@@ -30,7 +30,7 @@ function getapi(search_term) {
         .then(data => {
             console.log(data.data)
             if(data.data.length == 0){
-                item_div.innerHTML =`<div class="not-found-div" ><h1>Not Found Try Again </h1><img id="not-found-img" src="../images/not_found.gif"></div>`
+                item_div.innerHTML =`<div class="not-found-div" ><h1>Not Found Try Again </h1><img id="not-found-img" src="./images/not_found.gif"></div>`
             }
             else{
                 populate(data)
