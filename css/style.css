@@ -105,3 +105,16 @@ html,body{
 #item_detail_list{
     min-width: 10px;
 }
+#not-found-img{
+    width:40%;
+    align-self: center; 
+}
+.not-found-div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(3, 112, 175);
+    font-family: 'Indie Flower', cursive;
+    font-weight:bold;
+    font-size: 20px;
+}
